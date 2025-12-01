@@ -1,3 +1,8 @@
+"""
+A source utilized as inspiration to formulate this code includes the notebook titled "Notebook_03 - RNN and CNN Introduction" 
+which is provided within the CAP 6415 Computer Vision course. 
+"""
+
 import os
 import pandas as pd
 import numpy as np
