@@ -3,13 +3,25 @@ A source utilized as inspiration to formulate this code includes the notebook ti
 which is provided within the CAP 6415 Computer Vision course. 
 """
 
+# Before running this code, install the required dependencies below. 
+# Additionally, once the GitHub repository is cloned (https://github.com/dylans019/CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing.git), 
+# the training camera dataset needs to be downloaded, unzipped, and copied into the folder 
+# named data/training_dataset/. The training camera data can be downloaded 
+# from this link: https://drive.google.com/file/d/1BOzPzSa9JfQhPgA2VVJGOS4Zd6M1qP3w/view?usp=sharing
+
 # Required dependencies:
 # pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-# Note: Use the appropriate CUDA version for your machine. A CPU only version is also available. 
+#   Needed for the neural network layers, training functions, tensors, utilizing DataLoader, 
+#   for managing the GPU/CPU usage, for using the ResNet18 model, and for image transforms. 
+#   Note: Use the appropriate CUDA version for your machine. A CPU only version is also available. 
 # pip install pandas
+#   Needed for loading CSVs, merging the dataframes, and for cleaning up the data. 
 # pip install numpy
+#   Needeed for numerical operations, random seeding, and to convert arrays. 
 # pip install scikit-learn
+#   Used for splitting the data into training, validation, and testing sets. 
 # pip install pillow
+#   Used for opening PNG camera images. 
 
 import os
 import pandas as pd
