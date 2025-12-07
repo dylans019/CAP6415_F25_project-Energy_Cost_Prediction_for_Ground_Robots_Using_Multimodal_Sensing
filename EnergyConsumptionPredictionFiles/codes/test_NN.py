@@ -1,12 +1,22 @@
 # This Python script loads the trained model and tests the model on a test dataset. 
 
+# Before running this code, ensure the required dependencies shown below are installed. 
+# Additionally, once the GitHub repository is cloned (https://github.com/dylans019/CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing.git), 
+# the testing image data needs to be downloaded, unzipped, and placed into the following path: data/test_dataset/. 
+# The test image data can be downloaded here: https://drive.google.com/file/d/1D0K8JSMLcnGIXFMUYeFlR7Wp4wnADxyg/view?usp=sharing
+
 # Dependencies required:
 # pip install pandas
+#   Needed for readings CSV files, merging dataframes, and cleaning up the data. 
 # pip install numpy
+#   Needed for numerical operations, concatenate predictions, and compute the evaluation metrics. 
 # pip install matplotlib
+#   Used to generate the plot and save the plot image. 
 # pip install pillow
+#   Needed for loading the PNG camera images and converting them to RGB. 
 # pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-# Note: Use the appropriate CUDA version for your machine. A CPU only version is also available. 
+#   Needed to run the neural networks, load model weights, compute predictions, and select device GPU/CPU.   
+#   Note: Use the appropriate CUDA version for your machine. A CPU only version is also available. 
 
 import os
 import pandas as pd
