@@ -5,10 +5,15 @@ The specific codes utilized as inspiration includes the code files named "python
 Both of these code files are found in the github cited above under librealsense/wrappers/python/examples. 
 """
 
+# This code requires connection of your computer to an Intel RealSense D435i camera. 
+
 # Required dependencies:
 # pip install pyrealsense2
+#   Needed for connecting to the Intel RealSense camera to get depth and color frames. 
 # pip install numpy
+#   Used to convert frames to arrays. 
 # pip install opencv-python
+#   Needed to save the captured camera images. 
 
 import pyrealsense2 as rs
 import numpy as np
