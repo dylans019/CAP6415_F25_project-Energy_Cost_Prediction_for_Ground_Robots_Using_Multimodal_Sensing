@@ -6,6 +6,7 @@ Both of these code files are found in the github cited above under librealsense/
 """
 
 # This code requires connection of your computer to an Intel RealSense D435i camera. 
+# When running this code, I navigated to the CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing/EnergyConsumptionPredictionFiles/ directory. 
 
 # Required dependencies:
 # pip install pyrealsense2
@@ -20,7 +21,7 @@ import numpy as np
 import cv2, os, time, csv
 
 # Make folder for saving images
-dir_file = "camera_data/camera_data"
+dir_file = "data/training_dataset/camera_data/11_12_25-camera_data-grassy" # Modify the path based on the dataset you are collecting
 os.makedirs(dir_file, exist_ok=True)
 
 # Initialize RealSense camera pipeline
@@ -78,3 +79,4 @@ except KeyboardInterrupt:
 
 finally:
     pipeline.stop() # stop streaming
+
