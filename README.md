@@ -18,10 +18,10 @@ This project requires installing the following dependencies:
 - opencv-python (saves camera images)
 
 Install all dependencies using the commands:
-
+```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118  # Use appropriate CUDA version for your machine
 pip install numpy pandas scikit-learn pillow matplotlib opencv-python pyrealsense2
-
+```
 
 Additional Requirements:
 
@@ -36,7 +36,7 @@ If collecting your own image dataset:
 
 ### This project has the following folder structure:
 
-'''
+```
 CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing/
   EnergyConsumptionPredictionFiles/
     codes/
@@ -72,4 +72,4 @@ CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Se
     results/
       pred_true_plot.png                     # scatter plot showing model performance
       test_run_predictions.csv               # CSV containing model predictions
-'''
+```
