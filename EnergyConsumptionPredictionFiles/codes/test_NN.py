@@ -2,8 +2,10 @@
 
 # Before running this code, ensure the required dependencies shown below are installed. 
 # Additionally, once the GitHub repository is cloned (https://github.com/dylans019/CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing.git), 
-# the testing image data needs to be downloaded, unzipped, and placed into the following path: data/test_dataset/. 
-# The test image data can be downloaded here: https://drive.google.com/file/d/1D0K8JSMLcnGIXFMUYeFlR7Wp4wnADxyg/view?usp=sharing
+# the testing image data needs to be downloaded, unzipped, and placed into the following path: 
+# CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing/EnergyConsumptionPredictionFiles/data/test_dataset/. 
+# The test image data can be downloaded here: https://drive.google.com/file/d/1kHXxy-vN67m-23yMomQYs8aTE1n2JRGP/view?usp=sharing
+# When running this code, I navigated to the CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing/EnergyConsumptionPredictionFiles/ directory. 
 
 # Dependencies required:
 # pip install pandas
@@ -327,3 +329,4 @@ def evaluate_on_new_data():
 
 if __name__ == "__main__":
     evaluate_on_new_data()
+
