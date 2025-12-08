@@ -23,6 +23,8 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install numpy pandas scikit-learn pillow matplotlib opencv-python pyrealsense2
 ```
 
+Ubuntu 22.04 was utilized when developing and testing this project. 
+
 Additional Requirements:
 
 - Python 3.8-3.12
