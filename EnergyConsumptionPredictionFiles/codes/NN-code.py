@@ -5,9 +5,11 @@ which is provided within the CAP 6415 Computer Vision course.
 
 # Before running this code, install the required dependencies below. 
 # Additionally, once the GitHub repository is cloned (https://github.com/dylans019/CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing.git), 
-# the training camera dataset needs to be downloaded, unzipped, and copied into the folder 
-# named data/training_dataset/. The training camera data can be downloaded 
-# from this link: https://drive.google.com/file/d/1BOzPzSa9JfQhPgA2VVJGOS4Zd6M1qP3w/view?usp=sharing
+# the training camera dataset needs to be downloaded, unzipped, and copied into the folder named 
+# CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing/EnergyConsumptionPredictionFiles/data/training_dataset/. 
+# The training camera data can be downloaded from this 
+# link: https://drive.google.com/file/d/1UfFbIxSfOAAKuy8xqc__Njx_E6Xbq4us/view?usp=sharing
+# When running this code, I navigated to the CAP6415_F25_project-Energy_Cost_Prediction_for_Ground_Robots_Using_Multimodal_Sensing/EnergyConsumptionPredictionFiles/ directory. 
 
 # Required dependencies:
 # pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
@@ -36,10 +38,10 @@ import torchvision.transforms as T
 import torchvision.models as models
 
 
-GPS_CSV_PATH = "" # Write path to the GPS CSV file
-TELEMETRY_CSV_PATH = "" # Write path to the telemetry CSV file
-IMAGES_CSV_PATH = "" # Write path to the camera CSV file
-IMAGE_ROOT_DIR = "" # Write path to the camera images saved as .PNG
+GPS_CSV_PATH = "data/training_dataset/train_gps_20251112_163052.csv" 
+TELEMETRY_CSV_PATH = "data/training_dataset/train_grassy_terrain_data.csv" 
+IMAGES_CSV_PATH = "data/training_dataset/camera_data/11_12_25-camera_data-grassy/index.csv" 
+IMAGE_ROOT_DIR = "data/training_dataset" 
 
 # Name of the timestamp column for each CSV file
 GPS_TIMESTAMP_COL   = "timestamp (sec)" 
@@ -174,7 +176,7 @@ class JackalEnergyDataset(Dataset):
 
         # Loads image from specified row
         img_filename = row[IMAGE_FILENAME_COL]
-        img_path = row[IMAGE_FILENAME_COL]
+        img_path = os.path.join(self.image_root, img_filename)
         img = Image.open(img_path).convert("RGB")
         img = self.transform(img)
 
