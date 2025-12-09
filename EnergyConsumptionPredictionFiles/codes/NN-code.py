@@ -19,7 +19,7 @@ which is provided within the CAP 6415 Computer Vision course.
 # pip install pandas
 #   Needed for loading CSVs, merging the dataframes, and for cleaning up the data. 
 # pip install numpy
-#   Needeed for numerical operations, random seeding, and to convert arrays. 
+#   Needed for numerical operations, random seeding, and to convert arrays. 
 # pip install scikit-learn
 #   Used for splitting the data into training, validation, and testing sets. 
 # pip install pillow
